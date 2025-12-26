@@ -100,3 +100,122 @@ This project follows **industry-style embedded firmware design**, using modular 
 
 ## 📁 Project Folder Structure
 
+FINAL_DOSE_GARDIAN/
+│
+├── DOSE_GAURDIAN.c → Main application file
+├── lcd.c / lcd.h → LCD driver
+├── lcd_defines.h → LCD commands & macros
+├── keypad.c / keypad.h → Keypad driver
+├── keypad_defines.h → Key mappings
+├── rtc.c / rtc.h → RTC driver
+├── rtc_defines.h → RTC registers & macros
+├── MD_CLK_SET.c → Time/Date/Day arrow mode logic
+├── MD_CLK_SET_2.c → Medicine scheduling logic
+├── delay_header.h → Delay prototypes
+├── def_delay.c → Delay implementation
+├── defines.h → Global macros & pin definitions
+├── types.h → Custom data types
+├── *.uvproj / *.axf → Keil project & build files
+└── README.md → Project documentation
+
+---
+
+
+---
+
+## ⚙️ Functional Overview
+1. System initializes LCD, RTC, keypad, buzzer, and LED
+2. User sets:
+   - Time
+   - Date
+   - Day
+3. User configures medicine alert time
+4. RTC continuously compares current time with medicine time
+5. On match:
+   - Buzzer turns ON
+   - LED turns ON
+   - LCD shows alert
+6. User acknowledges alert using keypad
+
+---
+
+## 🧠 Key Files Explained
+
+### `DOSE_GAURDIAN.c`
+- Main entry point
+- Initializes peripherals
+- Calls configuration and alert functions
+
+### `MD_CLK_SET.c`
+- Arrow-based UI for:
+  - Time
+  - Date
+  - Day
+- Handles UP/DOWN/LEFT/RIGHT navigation
+
+### `lcd.c / lcd.h`
+- LCD initialization
+- Command, character, and string display
+- Custom CGRAM character support
+
+### `keypad.c / keypad.h`
+- Matrix keypad scanning
+- Debounced key detection
+
+### `rtc.c / rtc.h`
+- RTC initialization
+- Time/date read and write functions
+
+---
+
+## 🔄 Step-by-Step Code Implementation Flow
+1. MCU reset and boot
+2. GPIO direction configuration
+3. LCD initialization
+4. Custom LCD characters loaded (arrows)
+5. RTC initialization
+6. Keypad initialization
+7. Startup message display
+8. Enter main super-loop
+9. User configuration mode via keypad
+10. Store time/date/day values
+11. Continuous RTC monitoring
+12. Trigger alert on time match
+13. User acknowledgment clears alert
+
+---
+
+## ➕ Additional Notes (Best Practices)
+- CGRAM characters are loaded **once** to avoid flicker
+- Input values are range-checked to prevent invalid dates
+- Code is modular and reusable
+- Designed for easy expansion (EEPROM, GSM, IoT)
+
+---
+
+## 🚀 Future Enhancements
+- EEPROM storage for power-loss recovery
+- Multiple medicine schedules
+- GSM/SMS or IoT notifications
+- Mobile app integration
+- Low-power sleep modes
+
+---
+
+## 🎓 Academic Context
+This project is developed as an **Embedded Systems Mini Project** demonstrating:
+- ARM7 microcontroller programming
+- RTC, LCD, keypad interfacing
+- Embedded C best practices
+- Real-world application design
+
+---
+
+## 📜 License
+This project is intended for **educational and academic use only**.
+
+---
+
+**DOSE GUARDIAN – Reliable. Simple. Life-Saving.**
+
+
