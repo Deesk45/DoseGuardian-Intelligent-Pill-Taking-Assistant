@@ -1,6 +1,6 @@
 # DoseGuardian-Intelligent-Pill-Taking-Assistant
 
-# 🩺 DOSE GUARDIAN – Embedded Medicine Reminder System
+# 🩺 DOSE GUARDIAN – Intelligent-Pill-Taking-Assistant
 
 ## 📌 Project Description
 **DOSE GUARDIAN** is an embedded systems project developed using the **LPC21xx (ARM7TDMI-S)** microcontroller.  
@@ -117,9 +117,6 @@ FINAL_DOSE_GARDIAN/
 ├── types.h → Custom data types
 ├── *.uvproj / *.axf → Keil project & build files
 └── README.md → Project documentation
-
----
-
 
 ---
 
