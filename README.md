@@ -46,10 +46,9 @@ This project follows **industry-style embedded firmware design**, using modular 
 
 ## 💻 Software Requirements
 - Keil µVision IDE
-- ARM7 LPC21xx toolchain
-- Embedded C (C99)
+- Embedded C 
 - Flash Magic (for flashing)
-- Proteus (optional, for simulation)
+- Proteus (for simulation)
 
 ---
 
@@ -99,21 +98,21 @@ This project follows **industry-style embedded firmware design**, using modular 
 
 ## 📁 Project Folder Structure
 
-FINAL_DOSE_GARDIAN/
-│
-├── DOSE_GAURDIAN.c → Main application file
-├── lcd.c / lcd.h → LCD driver
-├── lcd_defines.h → LCD commands & macros
-├── keypad.c / keypad.h → Keypad driver
-├── keypad_defines.h → Key mappings
-├── rtc.c / rtc.h → RTC driver
-├── rtc_defines.h → RTC registers & macros
-├── MD_CLK_SET.c → Time/Date/Day arrow mode logic
-├── MD_CLK_SET_2.c → Medicine scheduling logic
-├── delay_header.h → Delay prototypes
-├── def_delay.c → Delay implementation
-├── defines.h → Global macros & pin definitions
-├── types.h → Custom data types
+FINAL_DOSE_GARDIAN  
+│  
+├── DOSE_GAURDIAN.c → Main application file  
+├── lcd.c / lcd.h → LCD driver  
+├── lcd_defines.h → LCD commands & macros  
+├── keypad.c / keypad.h → Keypad driver  
+├── keypad_defines.h → Key mappings  
+├── rtc.c / rtc.h → RTC driver  
+├── rtc_defines.h → RTC registers & macros  
+├── MD_CLK_SET.c → Time/Date/Day arrow mode logic  
+├── MD_CLK_SET_2.c → Medicine scheduling logic  
+├── delay_header.h → Delay prototypes  
+├── def_delay.c → Delay implementation  
+├── defines.h → Global macros & pin definitions  
+├── types.h → Custom data types  
 └── README.md → Project documentation
 
 ---
@@ -180,6 +179,18 @@ FINAL_DOSE_GARDIAN/
 
 ---
 
+### 📸 Hardware & Simulation Outputs
+The following results were captured during testing:
+
+## LCD Time & Date Configuration Screen
+ <img width="1178" height="818" alt="image" src="https://github.com/user-attachments/assets/22328169-ccee-4dba-abeb-58d693637b4a" />
+## Medicine Alert Trigger Screen
+ <img width="1174" height="754" alt="Screenshot 2025-12-29 164007" src="https://github.com/user-attachments/assets/c836545a-8faa-4939-8cc3-75da38970268" />
+## Buzzer and LED ON Indication
+ <img width="1166" height="776" alt="image" src="https://github.com/user-attachments/assets/dac6cf40-4e66-4da1-b41a-81957de35e90" />
+
+---
+
 ## ➕ Additional Notes (Best Practices)
 - CGRAM characters are loaded **once** to avoid flicker
 - Input values are range-checked to prevent invalid dates
@@ -210,7 +221,17 @@ This project is developed as an **Embedded Systems Mini Project** demonstrating:
 This project is intended for **educational and academic use only**.
 
 ---
+## 👨‍💻 Developed By
 
-**DOSE GUARDIAN – Reliable. Simple. Life-Saving.**
+**Deepak Khaladkar**  
+Embedded Systems Trainee | E&TC Graduate  
+
+**Technical Skills:**  
+Embedded C, ARM (LPC21xx), RTC, LCD, Keypad Interfacing, GPIO  
+
+**Project Type:**  
+Embedded Systems Mini Project (Academic)
+
+*DOSE GUARDIAN – Reliable. Simple. Life-Saving.*
 
 
