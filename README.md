@@ -50,7 +50,6 @@ This project follows **industry-style embedded firmware design**, using modular 
 - Embedded C (C99)
 - Flash Magic (for flashing)
 - Proteus (optional, for simulation)
-- Git (for version control)
 
 ---
 
@@ -115,7 +114,6 @@ FINAL_DOSE_GARDIAN/
 ├── def_delay.c → Delay implementation
 ├── defines.h → Global macros & pin definitions
 ├── types.h → Custom data types
-├── *.uvproj / *.axf → Keil project & build files
 └── README.md → Project documentation
 
 ---
